@@ -55,6 +55,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-standard": "^4.0.1",
+    "esm": "^3.2.25",
     "jsdom": "^15.2.1",
     "md5": "^2.2.1",
     "react-addons-test-utils": "^15.6.2",
@@ -68,7 +69,12 @@
         ]
       }
     },
-    "register": ["babel-register"]
+    "register": [
+      "babel-register"
+    ],
+    "require": [
+      "esm"
+    ]
   },
   "scripts": {
     "start": "PORT=3333 react-scripts start",
