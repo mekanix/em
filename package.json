@@ -38,6 +38,11 @@
   },
   "devDependencies": {
     "@sindresorhus/slugify": "^0.3.0",
+    "ava": "^2.4.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-loader": "https://github.com/raineorshine/eslint-loader#patch",
@@ -47,6 +52,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-standard": "^4.0.1",
+    "esm": "^3.2.25",
     "md5": "^2.2.1",
     "xml2json": "^0.11.2"
   },
@@ -55,7 +61,8 @@
     "build": "react-scripts build",
     "deploy": "npm version major && npm run build && firebase deploy",
     "lint": "eslint src",
-    "test": "npm run lint",
+    "pretest": "npm run lint",
+    "test": "ava",
     "eject": "react-scripts eject"
   },
   "browserslist": {
